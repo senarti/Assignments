@@ -1,0 +1,116 @@
+pipe and redirection operators assignment
+
+
+Linux Environment Variable  Assignment
+
+
+1.	Create a script named “myscript”  in current directory to do the following.
+Ans.    arti@LAPTOP-SE7D2H4D:~$ pwd
+        /home/arti/myscript
+        arti@LAPTOP-SE7D2H4D:~$ mkdir myspript
+        arti@LAPTOP-SE7D2H4D:~$ vi myscript.sh
+        arti@LAPTOP-SE7D2H4D:~$ cat vi myscript
+        
+a)	create a dir named “subd1” in current directory
+Ans.    arti@LAPTOP-SE7D2H4D:~$ mkdir myspript
+        arti@LAPTOP-SE7D2H4D:~$ vi myscript.sh
+        arti@LAPTOP-SE7D2H4D:~$ mkdir- -p myscrip/subd1
+        arti@LAPTOP-SE7D2H4D:~$ ls myscript
+        subd1
+        myscript myscript.h
+
+        
+b)	create a file named “dircontent” with contents of the current directory.
+Ans.    arti@LAPTOP-SE7D2H4D:~$ cat myscript.sh
+        " welcome to the linux world"
+        arti@LAPTOP-SE7D2H4D:~$ ls
+        assign.c d2 f1 file.text final.c l1 myscrip rr testdir ww
+        current f1.text fileout formal.h listfile myscript.h
+        arti@LAPTOP-SE7D2H4D:~$ cat >dircontent
+        arti@LAPTOP-SE7D2H4D:~$ touch dircontent
+        arti@LAPTOP-SE7D2H4D:~$ cp myscript.sh dircontent
+        arti@LAPTOP-SE7D2H4D:~$ cat dircontent
+        " welcome to the linux world" 
+       
+c)	display the contents of the file “dircontent”
+Ans.    arti@LAPTOP-SE7D2H4D:~/dir2/d2$ echo $dircontent
+        arti@LAPTOP-SE7D2H4D:~$ cat >dircontent
+        arti@LAPTOP-SE7D2H4D:~$ touch dircontent
+        arti@LAPTOP-SE7D2H4D:~$ cp myscript.sh dircontent
+        arti@LAPTOP-SE7D2H4D:~$ cat dircontent
+        " welcome to the linux world"
+
+         
+d)	display the contents of a non existing file named “unknownfile”.
+Ans.    arti@LAPTOP-SE7D2H4D:~$ vi unknownfile.sh
+        arti@LAPTOP-SE7D2H4D:~$ bash unknownfile.sh
+        arti@LAPTOP-SE7D2H4D:~$ cat unknownfile
+        cat: unknownfile : No such file found
+        
+2.	Run the script and validate the output in following cases
+
+a)	Redirect only the stdout to an o/p file named stdout.txt
+Ans.    arti@LAPTOP-SE7D2H4D:~$ cat < stdout.text
+        read the input
+        via keyboard
+        display in the terminal
+        arti@LAPTOP-SE7D2H4D:~$ cat 1< stdout.text >fileout
+        arti@LAPTOP-SE7D2H4D:~$ cat fileout
+        read the input
+        via keyboard
+        display in the terminal
+
+b)	Redirect only the stderr to an o/p file named stderr.txt
+Ans.    arti@LAPTOP-SE7D2H4D:~$ ls
+        assign.c d2 f1 file.text final.c l1 myscrip rr testdir ww
+        current f1.text fileout formal.h listfile myscript.h
+        arti@LAPTOP-SE7D2H4D:~$ cd sample 
+        arti@LAPTOP-SE7D2H4D:~$ sample 2>sterr.text
+        arti@LAPTOP-SE7D2H4D:~$ ls 
+        assign.c d2 f1 file.text final.c l1 myscrip rr testdir ww
+        command sample not found
+        
+         
+
+
+
+c)	Redirect both stdout and stderr to an o/p file named stdall.txt
+Ans.    arti@LAPTOP-SE7D2H4D:~$ pwd
+        /home/vishakha/myscript
+        arti@LAPTOP-SE7D2H4D:~/myscript$ ls
+        sterr.text subd1
+        arti@LAPTOP-SE7D2H4D:~/myscript$ ls d3
+        ls: cann't access the d3: no such file 
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ ls d3>stdall.text
+        ls: cann't access the d3: no such file
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ ls d3>stdall.text 2>&1
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ ls
+        stdall.text sterr.text subd1
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ cat sdall.text
+        ls: cann't access the d3: no such file
+
+d)	Display all o/p and error  and also redirect both stdout and stderr to an o/p file named stdall.txt
+Ans.    
+        arti@LAPTOP-SE7D2H4D:~/myscript$ ls
+        sterr.text subd1
+        arti@LAPTOP-SE7D2H4D:~/myscript$ ls d3
+        ls: cann't access the d3: no such file 
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ ls d3>stdall.text
+        ls: cann't access the d3: no such file
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ ls d3>stdall.text 2>&1
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ ls
+        stdall.text sterr.text subd1
+        arti@LAPTOP-SE7D2H4D:~/mysrcipt$ cat sdall.text
+        ls: cann't access the d3: no such file
+
+3.	Redirect the output of command below  using pipe (|) to wc  and get the output .
+	ls -l.
+Ans.    arti@LAPTOP-SE7D2H4D:~ cat f1.text
+        arti@LAPTOP-SE7D2H4D:~ ls -1 
+        a b d1 ff fil f1 file.tex file2 file3 file4  fileout  samplefile
+        arti@LAPTOP-SE7D2H4D:~$ ls-1|wc > fout
+        arti@LAPTOP-SE7D2H4D:~$ wc fout
+        a b d1 ff fil f1 file.tex file2 file3 file4  fileout  samplefile
+
+
+       
