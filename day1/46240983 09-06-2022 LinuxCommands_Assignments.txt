@@ -1,0 +1,198 @@
+
+
+        LinuxCommands_Assignments 
+
+Q1.) command to know the curent working directory 
+Ans. Pwd.
+     
+     arti@LAPTOP-SE7D2H4D:~$ pwd
+     /home/arti
+
+Q2) To find the content of current working directory 
+Ans. arti@LAPTOP-SE7D2H4D:~$ touch dir
+     arti@LAPTOP-SE7D2H4D:~$ cat > dir
+     welcome
+     world
+     arti@LAPTOP-SE7D2H4D:~$ cat dir 
+     welcom 
+     world 
+     
+
+Q3.)
+ 
+A)   ceate a directory d1.
+Ans. arti@LAPTOP-SE7D2H4D:~/$ mkdir d1
+     arti@LAPTOP-SE7D2H4D:~$ ls
+     d1 a   
+
+B) creat subdirectory d2 in d1.
+Ans. cammand: mkdir -p d1/d2
+    
+     arti@LAPTOP-SE7D2H4D:~/$ mkdir d1
+     arti@LAPTOP-SE7D2H4D:~$ ls
+     d1 arti
+     arti@LAPTOP-SE7D2H4D:~/$ cd d1
+     arti@LAPTOP-SE7D2H4D:~/d1$ mkdir d2
+     arti@LAPTOP-SE7D2H4D:~/d1$ ls
+     d2
+     arti@LAPTOP-SE7D2H4D:~/d1$ mkdir -p d1/d2
+     arti@LAPTOP-SE7D2H4D:~/d1$ cd d1
+     arti@LAPTOP-SE7D2H4D:~/d1/d2$ ls
+     arti@LAPTOP-SE7D2H4D:~/d1/d2$ pwd
+     /home/arti/d1/d2
+
+c) change it to directory d2
+Ans. arti@LAPTOP-SE7D2H4D:~/dir1/d1
+     arti@LAPTOP-SE7D2H4D:~$ cd d2
+     arti@LAPTOP-SE7D2H4D:~$ ls
+     /home/arti/d2
+     
+    
+
+D) create the empty file"f1.text'
+Ans. arti@LAPTOP-SE7D2H4D:~$ cd d1
+     arti@LAPTOP-SE7D2H4D:~$ touch f1.text
+     arti@LAPTOP-SE7D2H4D:~$  ls
+     d1 d2 f1 f1.text
+
+E) display the content of "f1.text"
+Ans. arti@LAPTOP-SE7D2H4D:~$ cat f1.text
+     hello arti 
+     
+
+f) view the contents of d1 from current directory d2.
+Ans. arti@LAPTOP-SE7D2H4D:~/dir1/dir1$ cat d1 d2 
+     
+4.) Use the ls command with its options. How will you identify directories from the listing.
+Ans. arti@LAPTOP-SE7D2H4D:~$ mkdir testdir
+     arti@LAPTOP-SE7D2H4D:~$ ls 
+     d1 d2 f1 f1.test file.text rr testdir a1 ww
+     arti@LAPTOP-SE7D2H4D:~$ ls -a
+     .bashrc d1 fi file.text testdir ww
+     .bash_logout .potrat .file3 d2 f1.text rr a1
+      arti@LAPTOP-SE7D2H4D:~$ ls ?
+      b d f  
+      arti@LAPTOP-SE7D2H4D:~$ ls -r
+      ww a1 testdir rr file.text f1.text f1 d2 d1
+ 
+5.)	Use ls to do the following 
+a.	List files with single character names.
+ Ans.   arti@LAPTOP-SE7D2H4D:~/dir2/d2$ ls ?
+           a b 
+
+
+b.	List hidden files also. [ Note : Hidden files are files having name started with a “.” ]
+Ans.    arti@LAPTOP-SE7D2H4D:~$ ls -a
+        .bashrc d1 fi file.text testdir ww
+        .bash_logout .potrat .file3 d2 f1.text rr a1
+
+c.	Suppose there are files tb1.1, tb2.1, tb3.1, ….tb10.1. Write command to list all the files [Hint: use wild card characters]
+Ans.    arti@LAPTOP-SE7D2H4D:~$ ls [tb1.1-tb10.1]*.text
+        new tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1
+
+6.	Write the command to list all files in descending order of their size
+Ans.    arti@LAPTOP-SE7D2H4D:~//dir2/d2$ ls -ls
+        
+7.	Suppose there are files temp1, temp2, temp3. Write command to remove the files without listing them explicitly
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ touch temp1 temp2 temp3
+        arti@LAPTOP-SE7D2H4D:~/$ ls
+        new tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1 temp1 temp2 temp3
+        arti@LAPTOP-SE7D2H4D:~/$ rm -r temp
+        arti@LAPTOP-SE7D2H4D:~/$ ls
+        new tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1 testdir
+        
+
+8.	Which command is used to list top few lines in the file?
+Ans.    head command: head -n f1.text
+        arti@LAPTOP-SE7D2H4D:~$ cat >file.text
+        a
+        b
+        c
+        d
+        e
+        f
+        g
+        arti@LAPTOP-SE7D2H4D:~$ head -4 file.text
+        a
+        b
+        c
+        d
+        
+ 
+9.	Create a directory   “testdir”
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ mkdir testdir
+        arti@LAPTOP-SE7D2H4D:~/$ ls
+        a c f3 file2 testdir f1.text
+
+10.	Use cp command to do the following
+a.	Copy the file tb1.1 (created above) in the same directory.
+Ans.     arti@LAPTOP-SE7D2H4D:~/testdir$ cp tb1.1
+
+b.	Write a command to copy all the files i.e tb1.1,tb2.1,tb3.1,…..tb10.1 in a new directory –“new”
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ mkdir new
+        arti@LAPTOP-SE7D2H4D:~/$ ls
+        tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1
+        arti@LAPTOP-SE7D2H4D:~/$ cp tb* new/
+        arti@LAPTOP-SE7D2H4D:~/$ ls new/
+        tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1
+
+c.	Create a subdirectory in new in named“new1”.
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ mkdir new
+        arti@LAPTOP-SE7D2H4D:~/$ ls
+        tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1
+        
+d.	Write a command to copy selectively only tb2.1, tb6.1, tb7.1 and tb10.1 in the directory new1.
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ mkdir -p new/new1 
+        arti@LAPTOP-SE7D2H4D:~/$ cp tb2.1, tb6.1, tb7.1 tb10.1 new/new1/
+        arti@LAPTOP-SE7D2H4D:~/$ ls new/new1
+        tb2.1, tb6.1, tb7.1 tb10.1
+
+e.	Write a command to copy the entire directory “new” to a directory “newprogs”. [Note : use the –R option of “cp” command ]
+Ans     arti@LAPTOP-SE7D2H4D:~/$ ls
+        tb1.1 tb2.1 tb3.3 tb4.1 tb5.1 tb6.1 tb7.1 tb8.1 tb9.1 tb10.1
+        arti@LAPTOP-SE7D2H4D:~/$ cp -r tb* newprogs      
+
+11.	Find out the difference between 
+a.	“mv” & “cp” 
+Ans.    mv is command to use for move the  content or file from one to another file renaming the file only.
+        cp is command to use for copy any content or file from one to another file.
+
+b.	“rm”, & “rmdir” 
+Ans.    rm is a command which remove the directory completely,includng subdirectories and files.
+        rmdir is a command which removes only emty directories.
+
+c.	“mkdir” and  “mkdir -p”
+Ans.     Mkdir creates the directory in default directory path or current working directory path in which powershell window is open.
+         mkdir - p creates the directory in the path mentioned by you explicitly.
+
+12.	Use a single command rmdir once to remove “testdir” and  all its sub directories and files created above.
+        arti@LAPTOP-SE7D2H4D:~/$ mkdir testdir
+        arti@LAPTOP-SE7D2H4D:~/$ rm -r testdir
+        
+
+13.	Which command is used to get the manual information of a command?
+Ans.    man command is use for to get the manual information of a command.
+
+14.	If you are not able to change to a directory what could be the likely cause?
+Ans.    It may happen that you are trying to cd into a file. 
+        The same message is thrown then. 
+        This may happen when something that you think should be a directory, is a file in reality. 
+        Well, Permission denied and Not a directory are different errors, and both describes what's wrong pretty clearly.
+
+15.	Explain the differences among the following commands:
+              a. cd /
+              b. cd ..
+              c. cd
+              d. cd ../..  
+ Ans.  cd/ command use to go back to the root directory of the current drive   
+       b. cd .. cammand is to change the a parent directory
+       cd command is a  change directory command. It is used to change current working directory.
+       d. cd ../.. command is to change the previous to previous directory.
+
+    
+
+        
+
+
+
+
