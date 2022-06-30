@@ -1,0 +1,50 @@
+file directory   Assignment
+
+Mandatory:
+
+1.	Search and display all *.c and *.h  files in all subdirectories starting from current directory
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ ls
+        temp.c ser.c myscript subd1 temp test aas.h
+        arti@LAPTOP-SE7D2H4D:~/$ ls *.c 
+        temp.c ser.c
+        arti@LAPTOP-SE7D2H4D:~/$ ls *.h
+        ass.h
+
+2.	Search and display all directories in all subdirectories starting from current directory
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ ls
+        d1 laptop pictures folder1 templets 
+        arti@LAPTOP-SE7D2H4D:~/$ cd d1
+        temp.c ser.c myscript subd1 temp test aas.h
+     
+
+3.	Search and display all files with permissions only rw with user and execute permission for others
+Ans.    command: chmod u+rw,o+x assign.c
+                 ls -l
+                 ./assign.c
+        
+        arti@LAPTOP-SE7D2H4D:~/$ chmod u+rw,o+x assign.c
+        arti@LAPTOP-SE7D2H4D:~/$ ls -l
+        total 0
+        -rw------x 1 arti arti 40  jun 10 6:10 assign.c
+        drw------x 1 arti arti 231 jun 10 6:10 d2
+        -rw------x 1 arti arti 85  jun 10 6:10 arr
+        -rw------x 1 arti arti 0   jun 10 6:10 f1
+        -rw------x 1 arti arti 0   jun 10 6:10 file.text
+        -rw------x 1 arti arti 10  jun 10 6:10 fileout
+        -rw------x 1 arti arti 512 jun 10 6:10 testdir
+        -rw------x 1 arti arti 0   jun 10 6:10 sample.c
+        -rw------x 1 arti arti 512 jun 10 6:10 ww
+
+Optional Assignments:
+1.	Search and copy all files whose size is < 500 bytes to a directory named “backup” 
+2.	Starting from home directory , find and display all 
+i.	empty files
+ii.	readonly files
+iii.	all empty directories
+3.	Search for a user input pattern in a set of files, extract all lines with the pattern , redirect to a file and display the contents of the file
+4.	Search and display all files which were modified in last 15 days
+5.	Search and display all file which were modified in last 10-15 days
+6.	count the number of words  in all *.txt files in  a directory and display
+7.	In a given directory sort all files based on their size (descending order) and then read and display the contents of each file 
+
+        

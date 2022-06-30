@@ -1,0 +1,28 @@
+Linux Environment Variable  Assignment
+
+1.	State the command for the following.
+
+a.	view current environment variables
+Ans.     echo $PWD
+
+b.	display the PATH evirnment variable value
+Ans.    echo $PATH
+
+c.	update PATH to  include the path to your home directory
+Ans.   arti@LAPTOP-SE7D2H4D:~$ echo $home
+       /home/arti 
+       arti@LAPTOP-SE7D2H4D:~$ cd
+       PATH=$PATH:/opt/bin/sh
+
+2.	How will you make the environment changes applicable to all users? Which script is to be modified?
+Ans.    To make permanent changes to the environment variables for all users, 
+        go to /etc/skel files, such as . bashrc , and change the ones that are already there or enter the new ones.
+        When we create new users, these /etc/skel files will be copied to the new user's home directory.
+        environment variables can be modified by using Bash scripts in order to modify the behaviour of the scripts.
+
+3.	I have installed an application named “myapp”. After installation, if I invoke the application, it fails with error as “Command myapp not found”. 
+        How will you fix this?
+Ans.    Use npx to solve the error "create-react-app: command not found", 
+        e.g. npx create-react-app my-app or install the package globally by running npm install -g create-react-app to be able to use the command without the npx prefix.
+
+

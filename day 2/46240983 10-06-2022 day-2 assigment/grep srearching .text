@@ -1,0 +1,42 @@
+grep  Assignment
+
+Mandatory:
+
+1.	Use any .c file. Using grep command extract and display 
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ vi gre.c
+
+a.	all lines beginning with #include  with line numbers.
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ grep -n include gre.c
+        1:#include<stdio.h>
+
+b.	display all lines which do not begin with #include
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ grep ^[^#] gre.c
+        int main()
+      {
+        int a,b, sum;
+        printf('enter first number");
+        scanf("%d", &a);
+        printf('enter second number");
+        scanf("%d", &b);
+        sum=a+b;
+        pintf('sum of two numbers");
+        return 0;
+        }
+
+c.	display the line number of main() 
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ grep -n main gre.c
+        2:int main()
+ 
+d.	extract all lines containing characters  of opening and closing parathesis {(,))
+Ans.    arti@LAPTOP-SE7D2H4D:~/$ gep -e "{"-e"}" -e "("-e")" -e "," final*c
+        int main()
+        {
+         int x,y,sum;
+         printf('enter first number"); 
+         scanf("%d", &x);
+         printf('enter second number");
+         scanf("%d", &y);
+         sum=x+y;
+         printf('sum");
+ 
+2.	Perform  the above operations on a set of *.c files
